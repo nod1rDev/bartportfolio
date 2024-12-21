@@ -1,5 +1,5 @@
 import "./index.css";
-import Spline from "@splinetool/react-spline";
+import Spline from '@splinetool/react-spline';
 
 function App() {
   const skills = ["32 y.o.", "UX/UI", "Web 3D", "Spline", "Figma", "Framer"];
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="flex flex-col md:flex-row text-white w-full bg-[#000] h-full md:h-screen gap-4 p-6">
-      <div className="flex flex-col w-full md:w-1/4 justify-between">
+      <div className="flex flex-col gap-4 w-full md:w-1/4 justify-between">
         <div className="flex-0 h-auto md:h-2/3 flex flex-col border border-[#101010] justify-between bg-[#101010] p-5 rounded-[23px]">
           <h1 className="text-4xl md:text-[5.5rem] tracking-tighter font-[750] leading-tight md:leading-[5rem] mb-4">
             Hello! <br /> I{"'"}m Max
