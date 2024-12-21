@@ -12,7 +12,7 @@ function App() {
         "https://framerusercontent.com/images/0wsUlAG6fOuWGIlB79WJjB7OFU.jpg",
       link: "https://apexbart.xyz",
     },
-    // Add more projects as needed
+   
   ];
 
   return (
