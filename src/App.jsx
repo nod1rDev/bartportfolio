@@ -16,8 +16,8 @@ function App() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row text-white w-full bg-[#000] h-full md:h-screen gap-4 p-6">
-      <div className="flex flex-col gap-4 w-full md:w-1/4 justify-between">
+    <div className="flex flex-col md:flex-row text-white w-full bg-[#000] h-full md:h-screen gap-4 p-3 md:p-6">
+      <div className="flex flex-col  md:gap-4 w-full md:w-1/4 justify-between">
         <div className="flex-0 h-auto md:h-2/3 flex flex-col border border-[#101010] justify-between bg-[#101010] p-5 rounded-[23px]">
           <h1 className="text-4xl md:text-[5.5rem] tracking-tighter font-[750] leading-tight md:leading-[5rem] mb-4">
             Hello! <br /> I{"'"}m Max
@@ -67,7 +67,7 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="hidden md:block h-full border bg-[#101010] border-[#101010] w-1/2 p-5 rounded-[23px]">
+      <div className=" h-full border bg-[#101010] border-[#101010] w-full md:w-1/2 p-5 rounded-[23px]">
         <Spline
           scene="https://prod.spline.design/cSx-xLZzhArfk7bC/scene.splinecode"
           style={{
@@ -93,7 +93,7 @@ function App() {
                     alt=""
                   />
                 </a>
-                <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                   Telegram
                 </div>
               </div>
