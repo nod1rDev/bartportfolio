@@ -1,7 +1,10 @@
+import React, { useState } from "react";
 import "./index.css";
-import Spline from '@splinetool/react-spline';
+import Spline from "@splinetool/react-spline";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const skills = ["32 y.o.", "UX/UI", "Web 3D", "Spline", "Figma", "Framer"];
 
   const projects = [
@@ -12,12 +15,11 @@ function App() {
         "https://framerusercontent.com/images/0wsUlAG6fOuWGIlB79WJjB7OFU.jpg",
       link: "https://apexbart.xyz",
     },
-   
   ];
 
   return (
     <div className="flex flex-col md:flex-row text-white w-full bg-[#000] h-full md:h-screen gap-4 p-3 md:p-6">
-      <div className="flex flex-col  md:gap-4 w-full md:w-1/4 justify-between">
+      <div className="flex flex-col md:gap-4 w-full md:w-1/4 justify-between">
         <div className="flex-0 h-auto md:h-2/3 flex flex-col border border-[#101010] justify-between bg-[#101010] p-5 rounded-[23px]">
           <h1 className="text-4xl md:text-[5.5rem] tracking-tighter font-[750] leading-tight md:leading-[5rem] mb-4">
             Hello! <br /> I{"'"}m Max
@@ -59,7 +61,10 @@ function App() {
           </div>
         </div>
         <div className="flex-0 bg-[#101010] border border-[#101010] p-5 rounded-[23px] h-1/6 flex justify-between mt-4 md:mt-0">
-          <button className="px-5 py-[16px] w-[65%] hover:shadow-white shadow-md transition-all duration-700 rounded-[30px] bg-white text-black text-center text-[1.1rem] font-[700]">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="px-5 py-[16px] w-[65%] hover:shadow-white shadow-md transition-all duration-700 rounded-[30px] bg-white text-black text-center text-[1.1rem] font-[700]"
+          >
             Contact me
           </button>
           <button className="bg-[#ffffff1a] py-[16px] font-bold text-[1.1rem] rounded-[30px] px-[34px] hover:border hover:border-white transition-all duration-700 hover:bg-opacity-[50%]">
@@ -67,7 +72,7 @@ function App() {
           </button>
         </div>
       </div>
-      <div className=" h-full border bg-[#101010] border-[#101010] w-full md:w-1/2 p-5 rounded-[23px]">
+      <div className="h-full border bg-[#101010] border-[#101010] w-full md:w-1/2 p-5 rounded-[23px]">
         <Spline
           scene="https://prod.spline.design/cSx-xLZzhArfk7bC/scene.splinecode"
           style={{
@@ -78,7 +83,7 @@ function App() {
           }}
         />
       </div>
-      <div className="flex flex-col  w-full md:w-1/4 gap-4 justify-between">
+      <div className="flex flex-col w-full md:w-1/4 gap-4 justify-between">
         <div
           id="logos"
           className="flex-0 min-h-[58%] pt-5 md:pb-0 flex flex-col border rounded-[23px] bg-[#101010] border-[#101010] items-center justify-center"
@@ -103,7 +108,7 @@ function App() {
                   className="flex flex-col items-center"
                 >
                   <img src="/insta.png" className="w-[48px] h-[48px]" alt="" />
-                  <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                  <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     Instagram
                   </div>
                 </a>
@@ -116,7 +121,7 @@ function App() {
                   className="flex flex-col items-center"
                 >
                   <img src="/twitterr.svg" className="" alt="" />
-                  <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                  <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     Twitter
                   </div>
                 </a>
@@ -127,7 +132,7 @@ function App() {
                   className="flex flex-col items-center"
                 >
                   <img src="/logo.svg" className="w-[48px] h-[48px]" alt="" />
-                  <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                  <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     ApexBart
                   </div>
                 </a>
@@ -142,7 +147,7 @@ function App() {
                     className="w-[48px] h-[48px]"
                     alt=""
                   />
-                  <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                  <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     Linkedin
                   </div>
                 </a>
@@ -155,7 +160,7 @@ function App() {
                   className="flex flex-col items-center"
                 >
                   <img src="/weChat.png" className="w-[48px] h-[48px]" alt="" />
-                  <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                  <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     WeChat
                   </div>
                 </a>
@@ -170,7 +175,7 @@ function App() {
                     className="w-[48px] bg-white rounded-[7px] h-[48px]"
                     alt=""
                   />
-                  <div className="hidden transition-all duration-700 group-hover:block text-[1.2rem] font-bold">
+                  <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     Facebook
                   </div>
                 </a>
@@ -215,6 +220,39 @@ function App() {
           </div>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed framer inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-[#1a1a1a] p-4 md:p-12 rounded-[32px] shadow-lg max-w-[340px] md:max-w-[500px] w-full">
+            <h2 className="text-[2rem] md:text-[5rem] font-bold text-center mb-4">
+              Say hi!
+            </h2>
+            <p className="mb-8 text-[#FFFFFFB3] md:text-center">
+              Approximate response time: 1-2 days.
+            </p>
+            <form onSubmit={() => setIsModalOpen(false)}>
+              <input
+                type="email"
+                required
+                placeholder="Email"
+                className="w-full p-3 mb-4 bg-[#333] rounded-xl"
+              />
+              <textarea
+                required
+                placeholder="How can I help you?"
+                className="w-full p-3 mb-4 bg-[#333] rounded-xl"
+                rows="4"
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full py-2 bg-white text-black rounded-xl font-bold"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

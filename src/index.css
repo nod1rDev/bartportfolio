@@ -98,3 +98,7 @@ body {
   box-shadow: 0 0 30px rgba(255, 255, 255, 1); /* Enhanced glow effect on hover */
   transform: scale(1.1);
 }
+
+.framer{
+  backdrop-filter: blur(42px);
+}
