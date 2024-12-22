@@ -51,13 +51,13 @@ body {
 }
 
 .containerr .hexagonArea.lasta {
-  transform: translateY(-25px);
+  transform: translateY(-20px);
 }
 
 .containerr .hexagonArea .hexagon {
   position: relative;
-  width: 90px;
-  height: 100px;
+  width: 85px;
+  height: 95px;
   margin: 0 2px;
 
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -77,8 +77,8 @@ body {
 @media (min-width: 768px) {
   .containerr .hexagonArea .hexagon {
     position: relative;
-    width: 110px;
-    height: 120px;
+    width: 100px;
+    height: 110px;
     margin: 0 2px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     background: #282626;
@@ -92,6 +92,10 @@ body {
     flex-direction: column;
     cursor: pointer;
     transition: transform 0.5s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .containerr .hexagonArea.lasta {
+    transform: translateY(-25px);
   }
 }
 .containerr .hexagonArea .hexagon:hover {
