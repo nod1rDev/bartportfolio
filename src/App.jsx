@@ -102,7 +102,7 @@ function App() {
           id="logos"
           className="flex-0 min-h-[60%]  md:pb-0 flex flex-col border rounded-[23px] bg-[#101010] border-[#101010] items-center justify-center"
         >
-          <span className="font-bold mt-4 mb-3  text-[#FFFFFFB3]">
+          <span className="font-bold mt-4 mb-3 text-[2rem]  text-[#FFFFFFB3]">
             Let{"'"}s work together
           </span>
           <div className="containerr">
@@ -196,13 +196,13 @@ function App() {
               </div>
             </div>
           </div>
-          <span className="font-bold  translate-y-[-30px] max-w-[90%]  text-[0.8rem] text-[#FFFFFFB3]">
+          <span className="font-bold  translate-y-[-30px] text-center max-w-[90%]  text-[0.8rem] text-[#FFFFFFB3]">
             Let’s discuss how we can work together to create impactful solutions
             tailored to your needs.
           </span>
         </div>
         <div className="flex-0 min-h-[36%] border rounded-[23px] p-6 bg-[#101010] border-[#101010] overflow-y-auto">
-          <h3 className="text-[1.2rem] font-bold text-[#FFFFFF] mb-4">
+          <h3 className="text-[1.4rem] text-center font-bold text-[#FFFFFF] mb-4">
             Latest projects
           </h3>
 
