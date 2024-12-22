@@ -1,19 +1,55 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./index.css";
 import Spline from "@splinetool/react-spline";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const skills = ["32 y.o.", "UX/UI", "Web 3D", "Spline", "Figma", "Framer"];
+  const skills = [
+    "AI Integration",
+    "Voice Data",
+    "Chatbots",
+    "Data Collection",
+    "ML",
+    "Business Management",
+    "Development",
+  ];
 
   const projects = [
     {
-      title: "Spline Design Course",
-      description: "Learn how to create web 3D",
+      title: "Voice Data Collection",
+      description: `High-quality multilingual datasets that enhance AI training efficiency.`,
       image:
-        "https://framerusercontent.com/images/0wsUlAG6fOuWGIlB79WJjB7OFU.jpg",
-      link: "https://apexbart.xyz",
+        "https://files.oaiusercontent.com/file-7CAKWrBerizQKUSXJDjBGD?se=2024-12-22T09%3A10%3A35Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7165a4fa-ce13-4404-9fec-d2169b4273e6.webp&sig=u50TFsE2OqOt6jrG3v892WRsrcjqkTjB3tHVH2maqEg%3D",
+      link: "https://free-war-fb9.notion.site/Voice-Data-Collection164376631960805580a5e804c7fa6d27?pvs=4",
+    },
+    {
+      title: "Custom Chatbots",
+      description: `Conversational AI solutions tailored for businesses.`,
+      image:
+        "https://www.plego.com/wp-content/uploads/2021/11/chatbot3-1024x652.jpg",
+      link: "https://free-war-fb9.notion.site/Custom-Chatbots-16437663196080d4b8c8e6041d393610?pvs=4",
+    },
+    {
+      title: "Automation Solutions",
+      description: `End-to-end platforms for streamlining operations`,
+      image:
+        "https://media.istockphoto.com/id/1367967285/photo/automation-software-technology-process-system-business-concept.jpg?s=612x612&w=0&k=20&c=VnRZHYgIfInFhaShiStMroW7PnVyvAC4C9SodjBf4ns=",
+      link: "https://free-war-fb9.notion.site/Automation-Solutions1643766319608042ad1ad2f73f880e18?pvs=4 ",
+    },
+    {
+      title: "Website Development",
+      description: `Modern, responsive websites to establish your online presence.`,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRl_6AuG1TxzQdGmZSN4pF02iLepIl6-4ucQ&s",
+      link: "https://free-war-fb9.notion.site/Website-Development16437663196080059302c01f3c9fe87f?pvs=4",
+    },
+    {
+      title: "Social Media Growth",
+      description: `Strategies and tools to boost engagement andvisibility`,
+      image:
+        "https://recurpost.com/wp-content/uploads/2022/05/good-thing-about-social-media-1024x576.png",
+      link: "https://free-war-fb9.notion.site/Automation-Solutions1643766319608042ad1ad2f73f880e18?pvs=4 ",
     },
   ];
 
@@ -21,19 +57,24 @@ function App() {
     <div className="flex flex-col md:flex-row text-white w-full bg-[#000] h-full md:h-screen gap-4 p-3 md:p-6">
       <div className="flex flex-col md:gap-4 w-full md:w-1/4 justify-between">
         <div className="flex-0 h-auto md:h-2/3 flex flex-col border border-[#101010] justify-between bg-[#101010] p-5 rounded-[23px]">
-          <h1 className="text-4xl md:text-[5.5rem] tracking-tighter font-[750] leading-tight md:leading-[5rem] mb-4">
-            Hello! <br /> I{"'"}m Max
+          <h1 className=" text-3xl md:text-[4.5rem] tracking-tighter   leading-tight md:leading-[5rem] mb-4">
+            Hello! <br /> I{"'"}m{" "}
+            <span className="font-bold text-4xl md:text-[5.5rem]">Bart</span>
           </h1>
-          <p className="mb-6 text-[#FFFFFFB3] text-[1rem] max-w-full md:max-w-[95%] font-[500]">
-            <span className="text-white">Product Designer</span> with 10+ years
-            of production experience in various business areas. Experienced in
-            creating design solutions for mobile, websites, and services.
+          <p className="mb-6 text-[#FFFFFFB3] text-[0.8vw] max-w-full md:max-w-[95%] font-[500]">
+            The founder of{" "}
+            <span className="text-white">ApexBart Solutions</span>. I specialize
+            in delivering complete, end-to-end solutions in voice data,
+            chatbots, and digital transformation. With experience managing 20+
+            multilingual voice recording projects and building AI-powered tools,
+            I bridge the gap between humans and technology to help businesses
+            scale globally.
           </p>
           <div className="flex flex-wrap gap-2">
             {skills.map((e) => (
               <span
                 key={e}
-                className="border cursor-pointer text-[12px] border-slate-400 hover:bg-gray-700 hover:bg-opacity-[30%] transition-all duration-700 px-3 py-1 rounded-[24px]"
+                className="border cursor-pointer text-[0.56vw] border-slate-400 hover:bg-gray-700 hover:bg-opacity-[30%] transition-all duration-700 px-3 py-1 rounded-[24px]"
               >
                 {e}
               </span>
@@ -47,10 +88,10 @@ function App() {
               "url('https://framerusercontent.com/images/HFLO9jxwhZXs3FhX4jM8zPTcs.png')",
           }}
         >
-          <div className="p-5">
-            <p className="font-bold text-[1.2rem]">Amsterdam, NL</p>
+          <div id="Location" className="p-5">
+            <p className="font-bold text-[1.2rem]">Singapore, SG</p>
             <p className="text-[#FFFFFFB3] text-[0.9rem] font-[500]">
-              09:58 GMT+1 Local time
+              15:37 GMT+8 Local time
             </p>
           </div>
           <div className="h-full flex items-center justify-center">
@@ -60,19 +101,21 @@ function App() {
             ></div>
           </div>
         </div>
-        <div className="flex-0 bg-[#101010] border border-[#101010] p-5 rounded-[23px] h-1/6 flex justify-between mt-4 md:mt-0">
+        <div className="flex-0 bg-[#101010] border border-[#101010] p-5 rounded-[23px] h-[14%] items-center flex justify-between mt-4 md:mt-0">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="px-5 py-[16px] w-[65%] hover:shadow-white shadow-md transition-all duration-700 rounded-[30px] bg-white text-black text-center text-[1.1rem] font-[700]"
+            className="px-5 py-[16px] max-h-[56px] w-[65%] hover:shadow-white shadow-md transition-all duration-700 rounded-[30px] bg-white text-black text-center text-[1.1rem] font-[700]"
           >
             Contact me
           </button>
-          <button className="bg-[#ffffff1a] py-[16px] font-bold text-[1.1rem] rounded-[30px] px-[34px] hover:border hover:border-white transition-all duration-700 hover:bg-opacity-[50%]">
-            CV
-          </button>
+          <a href="https://free-war-fb9.notion.site/Professional-Portfolio-Bart-16137663196080489062f257bb6773fc?pvs=4">
+            <button className="bg-[#ffffff1a]  max-h-[56px] py-[16px] font-bold text-[0.8rem] rounded-[30px] px-[34px] hover:border hover:border-white transition-all duration-700 hover:bg-opacity-[50%]">
+              GET MY CV
+            </button>
+          </a>
         </div>
       </div>
-      <div className="h-full border bg-[#101010] border-[#101010] w-full md:w-1/2 p-5 rounded-[23px]">
+      <div className="h-[650px] md:h-full border bg-[#101010] border-[#101010] w-full md:w-1/2 p-5 rounded-[23px]">
         <Spline
           scene="https://prod.spline.design/cSx-xLZzhArfk7bC/scene.splinecode"
           style={{
@@ -91,7 +134,7 @@ function App() {
           <div className="containerr">
             <div className="hexagonArea">
               <div className="hexagon group">
-                <a href={"https://web.telegram.org/"}>
+                <a href={"https://t.me/whynotbart"}>
                   <img
                     src="/telegram.png"
                     className="w-[48px] h-[48px]"
@@ -104,7 +147,7 @@ function App() {
               </div>
               <div className="hexagon group">
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/cobrabart/"
                   className="flex flex-col items-center"
                 >
                   <img src="/insta.png" className="w-[48px] h-[48px]" alt="" />
@@ -117,7 +160,7 @@ function App() {
             <div className="hexagonArea lasta">
               <div className="hexagon group">
                 <a
-                  href="https://x.com/home?lang=ru"
+                  href="https://x.com/apexbart"
                   className="flex flex-col items-center"
                 >
                   <img src="/twitterr.svg" className="" alt="" />
@@ -139,26 +182,23 @@ function App() {
               </div>
               <div className="hexagon group">
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://medium.com/@bartyanyan"
                   className="flex flex-col items-center"
                 >
                   <img
-                    src="/linkidin.png"
-                    className="w-[48px] h-[48px]"
+                    src="/medium.png"
+                    className="bg-white rounded-[7px] w-[48px] h-[48px]"
                     alt=""
                   />
                   <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
-                    Linkedin
+                    Medium
                   </div>
                 </a>
               </div>
             </div>
             <div className="hexagonArea translate-y-[-48px]">
               <div className="hexagon group">
-                <a
-                  href="https://ibb.co/whF9K7F"
-                  className="flex flex-col items-center"
-                >
+                <a href="/qr.png" className="flex flex-col items-center">
                   <img src="/weChat.png" className="w-[48px] h-[48px]" alt="" />
                   <div className="hidden transition-all duration-700 group-hover:block text-[1rem] font-bold">
                     WeChat
@@ -167,7 +207,7 @@ function App() {
               </div>
               <div className="hexagon group">
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/profile.php?id=61550044081295"
                   className="flex flex-col items-center"
                 >
                   <img
@@ -210,7 +250,7 @@ function App() {
                   />
                   <div className="flex flex-col ">
                     <span className="font-bold">{e.title}</span>
-                    <span className="text-[#FFFFFFB3]">
+                    <span className="text-[#FFFFFFB3] text-[0.8rem]">
                       {e.description}
                     </span>{" "}
                   </div>
@@ -250,6 +290,12 @@ function App() {
                 Send
               </button>
             </form>
+            <button
+              onClick={setIsModalOpen(false)}
+              className="w-full py-2 bg-red-500 text-white backrounded-xl font-bold"
+            >
+              Back
+            </button>
           </div>
         </div>
       )}
